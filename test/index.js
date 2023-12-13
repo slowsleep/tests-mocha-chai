@@ -10,5 +10,9 @@ describe('Получение данных о пользователе с api git
         let res = await getUser();
         expect(res.data).that.is.not.empty;
     });
+    it('В данных пользователя присутвует количество репозиториев', async () => {
+        let res = await getUser();
+        expect(res.data.public_repos).that.is.equal(22);
+    });
 });
 
