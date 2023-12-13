@@ -1,5 +1,3 @@
-const fetch = require('node-fetch');
-
 async function getUser() {
     const response = await fetch('https://api.github.com/users/slowsleep');
     const status = await response.status;
